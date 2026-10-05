@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Platform with Comments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <h2>My Blog App</h2>
+        <div id="auth-buttons">
+            <button onclick="showTab('login-section')" style="width: auto; padding: 6px 15px;">Login</button>
+            <button onclick="showTab('signup-section')" style="width: auto; padding: 6px 15px; background: #28a745;">Signup</button>
+        </div>
+        <div id="user-menu" class="hidden">
+            <span id="user-welcome" style="margin-right: 15px; font-weight: bold;"></span>
+            <button onclick="logout()" style="width: auto; padding: 6px 15px; background: #dc3545;">Logout</button>
+        </div>
+    </div>
+
+    <!-- Signup Section -->
+    <div id="signup-section" class="hidden">
+        <h3>Create an Account</h3>
+        <input type="text" id="signup-username" placeholder="Username">
+        <input type="email" id="signup-email" placeholder="Email">
+        <input type="password" id="signup-password" placeholder="Password">
+        <button onclick="registerUser()">Register</button>
+    </div>
+
+    <!-- Login Section -->
+    <div id="login-section">
+        <h3>Login to your Account</h3>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="loginUser()">Login</button>
+    </div>
+
+    <!-- Dashboard / Posts Section -->
+    <div id="dashboard-section" class="hidden">
+        <div style="background: #e9ecef; padding: 15px; border-radius: 6px; margin-bottom: 20px;">
+            <h3>Create a New Post</h3>
+            <input type="text" id="post-title" placeholder="Blog Title">
+            <textarea id="post-content" rows="4" placeholder="Write your blog content here..."></textarea>
+            <button onclick="createPost()">Publish Post</button>
+        </div>
+
+        <h3>All Blog Posts</h3>
+        <div id="posts-container">Loading posts...</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
