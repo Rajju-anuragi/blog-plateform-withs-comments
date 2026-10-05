@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 
-const authRoutes = require('./backend/routes/authRoutes');
-const postRoutes = require('./backend/routes/postRoutes');
-const commentRoutes = require('./backend/routes/commentRoutes');
+const authRoutes = require('./routes/authRoutes');
+const postRoutes = require('./routes/postRoutes');
+const commentRoutes = require('./routes/commentRoutes');
 
 const app = express();
 app.use(express.json());
